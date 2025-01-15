@@ -1,0 +1,46 @@
+.content {
+    align-self: center;
+    align-items: center;
+    justify-self: center;
+    justify-items: center;
+    border: black 1px solid;
+    width: 600px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 200px;
+    padding-right: 200px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.title{
+    border-bottom: black 1px solid;
+    width: 100%;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+.title h6{
+    margin-bottom: 10px;
+    color: #006EB6;
+    margin-top: 15px;
+    letter-spacing: 3px;
+}
+.title h1{
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.logo{
+    width: 150px;
+}
+
+li{
+    padding: 10px;
+}
+
+.dark {
+    background-color: #333;
+    color: white;
+}
+.dark h6 {
+    color: #4F9ACF;
+}
