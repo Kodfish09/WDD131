@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body {
+    font-family: "Roboto";
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+header, main, footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: solid black 1px;
+    padding: 25px;
+    background-color: lightblue;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+}
+
+@media screen and (min-width: 500px) {
+    header {
+        background-color: black;
+        color: white;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
