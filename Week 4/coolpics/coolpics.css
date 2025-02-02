@@ -19,11 +19,41 @@ a:link, a:visited {
     color: var(--accent-color);
 }
 
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.75);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    font-style: white;
+}
+#viewer-img {
+    align-self: top;
+    justify-self: center;
+    max-width: 90%;
+    height: 70%;
+}
+.viewer button {
+    justify-self: right;
+    grid-row: 0/1;
+    bottom: 0;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    height: 100px;
+    width: 100px;
+    border: none;
+}
+
+
 main h2 {
     color: var(--text-dark);
 }
 
-img {
+main img {
     width: 100%;
     height: 250px;
     width: 250px;
@@ -89,7 +119,11 @@ footer {
     header nav a {
         display: inline;
     }
-    button {
+    .header button {
         display: none;
+    }
+
+    .viewer {
+        margin: 30px;
     }
 }
