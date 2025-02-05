@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+:root {
+    --primary-color: #EFC69B;
+    --secondary-color: #AF1B3F;
+    --font-color: #473144;
+    --primary-font: Helvetica, Arial, sans-serif;
+    --heading-font: Lora, Impact, serif;
+}
+
+body {
+    margin: 0px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    color: var(--font-color);
+    justify-self: center;
+}
+h2, a {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+}
+p {
+    font-family: var(--primary-font);
+}
+
+#nav-bar {
+    border-top: solid 2px var(--primary-color);
+    border-bottom: solid 2px var(--primary-color);
+    justify-items: right;
+    font-size: 1.4em;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#nav-bar a {
+    margin-right: 30px;
+}
+
+.book {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 25px;
+}
+.book .info {
+    justify-items: right;
+    padding: 15px;
+    border-right: solid 2px var(--primary-color);
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+.book .general {
+    justify-items: center;
+}
+
+.filters {
+    border: solid 2px var(--primary-color);
+    grid-column: 2/3;
+    grid-row: 1/4;
+    margin-top: 25px;
+    margin-right: 100px;
+}
