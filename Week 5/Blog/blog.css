@@ -58,7 +58,7 @@ p {
     justify-items: center;
 }
 
-.filters {
+.filter {
     border: solid 2px var(--primary-color);
     grid-column: 2/3;
     grid-row: 1/4;
