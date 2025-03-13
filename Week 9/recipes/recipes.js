@@ -5,7 +5,7 @@ const recipes = [
 		isBasedOn: '',
 		cookTime: '30 Min',
 		datePublished: '2016-10-16',
-		tags: ['Waffles', 'Sweet Potato', 'Side'],
+		tags: ['Waffles', 'Side'],
 		description: 'Savory waffles made with Sweet potato with a hint of Ginger',
 		image: './images/sweet-potato-waffle-md.jpg',
 		recipeIngredient: [
@@ -280,4 +280,94 @@ const recipes = [
 	}
 ]
 
-export default recipes
+const button = document.getElementById("search");
+const input = document.getElementById("query");
+button.addEventListener('click', (e) => {
+	e.preventDefault();
+	searchHandler();
+});
+
+function searchHandler(e) {
+	const query = input.value.toLowerCase();
+	const filRecipe = filterRecipes(query);
+	console.log(filRecipe);
+	renderRecipes(filRecipe);
+}
+
+function filterRecipes(query) {
+	return recipes.filter(recipe => 
+		recipe.author.toLowerCase().includes(query) ||
+		recipe.description.toLowerCase().includes(query) ||
+		recipe.recipeIngredient.find(ing => ing.toLowerCase().includes(query)) ||
+		recipe.tags.find(tag => tag.toLowerCase().includes(query))
+	).sort((a,b) => a.author.localeCompare(b.author));
+}
+
+function randItem(list) {
+	const listLength = list.length;
+	let randNum = Math.floor(Math.random()*listLength);
+
+	return list[randNum];
+}
+
+function recipeTemplate(recipe) {
+	return `
+		<section id="recipe">
+			<img src="${recipe.image}" alt="${recipe.name}" />
+			<section>
+				<section class="tags">
+					${tagsTemplate(recipe.tags)}
+				</section>
+				<h2><a href="#">${recipe.name}</a></h2>
+				<section class="recipe__ratings">
+					${ratingTemplate(recipe.rating)}
+				</section>
+				<p class="recipe__description">${recipe.description}</p>
+			</section>
+		</section>`;
+}
+
+function tagsTemplate(tags) {
+	// loop through the tags list and transform the strings to HTML
+	let html = ``;
+	for (i = 0; i < tags.length; i++) {
+		let tag = `<h6 class="tag">${tags[i]}</h6>\n`
+		html += tag;
+	}
+	return html;
+}
+
+function ratingTemplate(rating) {
+	let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">\n`;
+
+	for (i = 1; i <= 5; i++) {
+		if (i <= rating) {
+			html += `<span aria-hidden="true" class="icon-star">⭐</span>\n`
+		} else {
+			html += `<span aria-hidden="true" class="icon-star-empty">☆</span>\n`;
+		}
+	}
+	html += `</span>`
+	
+	return html
+}
+
+function renderRecipes(recipeList) {
+	// get the element we will output the recipes into
+	const webHtml = document.getElementById("recipes");
+	let html = ``;
+	// use the recipeTemplate function to transform our recipe objects into recipe HTML strings
+	recipeList.forEach(recipe => {
+		html += recipeTemplate(recipe);
+	});
+	// Set the HTML strings as the innerHTML of our output element.
+	webHtml.innerHTML = html;
+}
+
+function init() {
+  // get a random recipe
+  const recipe = randItem(recipes)
+  // render the recipe with renderRecipes.
+  renderRecipes([recipe]);
+}
+init();
