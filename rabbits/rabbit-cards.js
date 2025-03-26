@@ -22,7 +22,7 @@ rabbits = [
         <p class="stat">6 Kits</p>
         <h4 class="title">MT:</h4>
         <p class="stat">10 Weeks</p>
-        <h4 class="title">MBR:</h4>
+        <h4 class="title">MY:</h4>
         <p class="stat">3.5lbs</p>
     </section>
     `,
@@ -49,7 +49,7 @@ rabbits = [
         <p class="stat">7 Kits</p>
         <h4 class="title">MT:</h4>
         <p class="stat">11 Weeks</p>
-        <h4 class="title">MBR:</h4>
+        <h4 class="title">MY:</h4>
         <p class="stat">6lbs</p>
     </section>
     `,
@@ -76,7 +76,7 @@ rabbits = [
         <p class="stat">8 Kits</p>
         <h4 class="title">MT:</h4>
         <p class="stat">15 Weeks</p>
-        <h4 class="title">MBR:</h4>
+        <h4 class="title">MY:</h4>
         <p class="stat">3.75lbs</p>
     </section>
     `,
@@ -103,7 +103,7 @@ rabbits = [
         <p class="stat">6 Kits</p>
         <h4 class="title">MT:</h4>
         <p class="stat">11 Weeks</p>
-        <h4 class="title">MBR:</h4>
+        <h4 class="title">MY:</h4>
         <p class="stat">3.5lbs</p>
     </section>
     `,
@@ -130,7 +130,7 @@ rabbits = [
         <p class="stat">8 Kits</p>
         <h4 class="title">MT:</h4>
         <p class="stat">11 Weeks</p>
-        <h4 class="title">MBR:</h4>
+        <h4 class="title">MY:</h4>
         <p class="stat">4.25lbs</p>
     </section>
     `
